@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using SSW_Final.Models;
+using ProjectDbStarter.Models;
 
-namespace SSW_Final.Controllers;
+namespace ProjectDbStarter.Controllers;
 
 public class HomeController : Controller
 {

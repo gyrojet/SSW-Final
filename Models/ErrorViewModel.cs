@@ -1,4 +1,4 @@
-namespace SSW_Final.Models;
+namespace ProjectDbStarter.Models;
 
 public class ErrorViewModel
 {
