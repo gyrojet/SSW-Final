@@ -488,23 +488,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abdin\\.nuget\\packages\\": {},
+    "C:\\Users\\lisal\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\0-OnlineCourse\\Fall 2026\\Server Side Web\\FinalProject\\ProjectDbStarter\\ProjectDbStarter\\ProjectDbStarter.csproj",
+      "projectUniqueName": "C:\\SjGithub\\SSV2026\\SSW_FinalProject\\SSW-Final\\ProjectDbStarter.csproj",
       "projectName": "ProjectDbStarter",
-      "projectPath": "C:\\0-OnlineCourse\\Fall 2026\\Server Side Web\\FinalProject\\ProjectDbStarter\\ProjectDbStarter\\ProjectDbStarter.csproj",
-      "packagesPath": "C:\\Users\\abdin\\.nuget\\packages\\",
-      "outputPath": "C:\\0-OnlineCourse\\Fall 2026\\Server Side Web\\FinalProject\\ProjectDbStarter\\ProjectDbStarter\\obj\\",
+      "projectPath": "C:\\SjGithub\\SSV2026\\SSW_FinalProject\\SSW-Final\\ProjectDbStarter.csproj",
+      "packagesPath": "C:\\Users\\lisal\\.nuget\\packages\\",
+      "outputPath": "C:\\SjGithub\\SSV2026\\SSW_FinalProject\\SSW-Final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\abdin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lisal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -563,7 +563,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.404/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

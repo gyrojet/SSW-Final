@@ -14,6 +14,17 @@ builder.Services.AddDbContext<BowlingDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("BowlingDb"))
 );
 
+builder.Services.AddAuthentication("app-cookie")
+       .AddCookie("app-cookie", options =>
+       { // Default values for now...
+           options.LoginPath = "/Auth/Login";
+           options.LogoutPath  = "/Auth/Logout";
+           options.AccessDeniedPath = "/Auth/Denied";
+       });
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,9 +35,12 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
+
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
@@ -36,8 +50,8 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-// var hasher = new PasswordHasher<BowlingUser>();
-// var hash = hasher.HashPassword(new BowlingUser(), "smonk123");
-// Console.WriteLine(hash);
+var hasher = new PasswordHasher<BowlingUser>();
+var hash = hasher.HashPassword(new BowlingUser(), "smonk123");
+Console.WriteLine(hash);
 
 app.Run();
