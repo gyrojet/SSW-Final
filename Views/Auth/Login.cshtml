@@ -5,9 +5,9 @@
 
 </div>
 
-<h2>Admin Login</h2>
-
-<form method="post" asp-action="/Login" asp-controller="Auth">
+<form asp-action="Login" asp-controller="Auth" method="post">
+    <div asp-validation-summary="All" style="alert alert-danger"></div>
+    
     <div>
         <label>UserName</label>
         <input asp-for="UserName"/>

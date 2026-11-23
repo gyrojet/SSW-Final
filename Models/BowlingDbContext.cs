@@ -11,17 +11,14 @@ namespace ProjectDbStarter.Models
         {
         }
 
-
         public DbSet<Team> Teams => Set<Team>();
-
-
-
+        public DbSet<BowlingUser> Users => Set<BowlingUser>();
 
         // force singular table name
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Team>().ToTable("Team");
-
+            modelBuilder.Entity<BowlingUser>().ToTable("BowlingUser");
         }
     }
 }

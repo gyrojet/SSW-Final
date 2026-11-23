@@ -28,6 +28,17 @@
                         </li>
                     </ul>
                 </div>
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <span>Welcome, <span style="color: blue;">@User.Identity.Name</span></span>
+                    <form asp-action="Logout" asp-controller="Auth" method="post">
+                        <button class="btn btn-link">Logout</button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-controller="Auth" asp-action="Login">Login</a>
+                }
             </div>
         </nav>
     </header>

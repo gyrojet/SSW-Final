@@ -13,7 +13,7 @@ namespace ProjectDbStarter.Controllers
         {
             _db = db;
         }
-
+        // Authorize?? Get login working first!
         public IActionResult Index()
         {
             // Order for predictable display

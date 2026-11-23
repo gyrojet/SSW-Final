@@ -18,9 +18,18 @@ builder.Services.AddAuthentication("app-cookie")
        .AddCookie("app-cookie", options =>
        { // Default values for now...
            options.LoginPath = "/Auth/Login";
-           options.LogoutPath  = "/Auth/Logout";
+           options.LogoutPath  = "/Home/Index";
            options.AccessDeniedPath = "/Auth/Denied";
        });
+
+// Authorization for admin only features
+builder.Services.AddAuthorization( options =>
+{
+   options.AddPolicy("AdminOnly", policy =>
+   {  // must be admin to use this!
+      policy.RequireClaim("IsAdmin", "true"); 
+   });
+});
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession();
@@ -51,7 +60,7 @@ app.MapControllerRoute(
     .WithStaticAssets();
 
 var hasher = new PasswordHasher<BowlingUser>();
-var hash = hasher.HashPassword(new BowlingUser(), "smonk123");
+var hash = hasher.HashPassword(new BowlingUser(), "tempPass");
 Console.WriteLine(hash);
 
 app.Run();
