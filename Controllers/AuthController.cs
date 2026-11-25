@@ -106,10 +106,4 @@ public class AuthController : Controller
         await HttpContext.SignOutAsync("app-cookie");
         return RedirectToAction("Index", "Home");
     }
-
-    [HttpGet]
-    public IActionResult Denied()
-    {
-        return View();
-    }
 }
