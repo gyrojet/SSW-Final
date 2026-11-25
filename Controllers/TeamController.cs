@@ -1,5 +1,6 @@
 ﻿using ProjectDbStarter.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjectDbStarter.Controllers
 {
@@ -13,7 +14,7 @@ namespace ProjectDbStarter.Controllers
         {
             _db = db;
         }
-        // Authorize?? Get login working first!
+        [Authorize(Policy = "AdminOnly")]
         public IActionResult Index()
         {
             // Order for predictable display
